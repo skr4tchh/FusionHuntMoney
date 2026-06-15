@@ -1,0 +1,133 @@
+mob-drop:
+  spawner:
+    min: 3
+    max: 5
+  no-spawner:
+    min: 1
+    max: 3
+
+death-percent: # Сколько % денег снимается при смерти
+  default: 10
+  knight: 9
+  king: 8
+  titan: 7
+  griefer: 6
+  legenda: 5
+  emperor: 4
+  povel: 3
+  support: 1
+
+boosters: # Бустер настраивается для каждой группы
+  default: 1.0
+  knight: 1.25
+  king: 1.5
+  titan: 1.75
+  griefer: 2.0
+  legenda: 2.5
+  emperor: 3.0
+  povel: 4.0
+  support: 5.0
+
+death:
+  message: "§6ꜰᴜsɪᴏɴᴍɪɴᴇ §7» &fВы потеряли &c{money} ⛂ &fза смерть от игрока &7{player} ({percent}%)"
+  sendTitle:
+    enabled: true
+    title: "&4&lПОТРАЧЕНО"
+    subtitle: "&fНадоело умирать? &fПокупай донат &fи &cубивай &fвсех!"
+
+kill:
+  player:
+    message: "§6ꜰᴜsɪᴏɴᴍɪɴᴇ §7» &fВы заработали &6{money} ⛂ &fза убийство игрока &7{player}"
+  mob:
+    actionbar: "&fВы заработали &6{money} ⛂ &fза убийство моба &e{mob} &7(x{booster})"
+
+mob-names:
+  ALLAY: Эллей
+  ARMADILLO: Броненосец
+  AXOLOTL: Аксолотль
+  BAT: Летучая мышь
+  BEE: Пчела
+  BLAZE: Ифрит
+  BOGGED: Болотник
+  BREEZE: Бриз
+  CAMEL: Верблюд
+  CAMEL_HUSK: Верблюд-кадавр
+  CAT: Кошка
+  CAVE_SPIDER: Пещерный паук
+  CHICKEN: Курица
+  COD: Треска
+  COPPER_GOLEM: Медный голем
+  COW: Корова
+  CREAKING: Ропот
+  CREEPER: Крипер
+  DOLPHIN: Дельфин
+  DONKEY: Осёл
+  DROWNED: Утопленник
+  ELDER_GUARDIAN: Древний страж
+  ENDER_DRAGON: Дракон Края
+  ENDERMAN: Эндермен
+  ENDERMITE: Эндермит
+  EVOKER: Вызыватель
+  FOX: Лиса
+  FROG: Лягушка
+  GHAST: Гаст
+  GIANT: Гигант
+  GLOW_SQUID: Светящийся спрут
+  GOAT: Коза
+  GUARDIAN: Страж
+  HAPPY_GHAST: Счастливый гаст
+  HOGLIN: Хоглин
+  HORSE: Лошадь
+  HUSK: Кадавр
+  ILLUSIONER: Иллюзионер
+  IRON_GOLEM: Железный голем
+  LLAMA: Лама
+  MAGMA_CUBE: Лавовый куб
+  MOOSHROOM: Грибная корова
+  MULE: Мул
+  NAUTILUS: Наутилус
+  OCELOT: Оцелот
+  PANDA: Панда
+  PARCHED: PARCHED
+  PARROT: Попугай
+  PHANTOM: Фантом
+  PIG: Свинья
+  PIGLIN: Пиглин
+  PIGLIN_BRUTE: Пиглин-брутал
+  PILLAGER: Разбойник
+  POLAR_BEAR: Белый медведь
+  PUFFERFISH: Иглобрюх
+  RABBIT: Кролик
+  RAVAGER: Разрушитель
+  SALMON: Лосось
+  SHEEP: Овца
+  SHULKER: Шалкер
+  SILVERFISH: Чешуйница
+  SKELETON: Скелет
+  SKELETON_HORSE: Лошадь-скелет
+  SLIME: Слизень
+  SNIFFER: Нюхач
+  SNOW_GOLEM: Снежный голем
+  SPIDER: Паук
+  SQUID: Спрут
+  STRAY: Зимогор
+  STRIDER: Лавомерка
+  TADPOLE: Головастик
+  TRADER_LLAMA: Лама торговца
+  TROPICAL_FISH: Тропическая рыба
+  TURTLE: Черепаха
+  VEX: Векс
+  VILLAGER: Житель
+  VINDICATOR: Поборник
+  WANDERING_TRADER: Странствующий торговец
+  WARDEN: Варден
+  WITCH: Ведьма
+  WITHER: Иссушитель
+  WITHER_SKELETON: Визер скелет
+  WOLF: Волк
+  ZOGLIN: Зоглин
+  ZOMBIE: Зомби
+  ZOMBIE_HORSE: Лошадь-зомби
+  ZOMBIE_NAUTILUS: Зомби-наутилус
+  ZOMBIE_VILLAGER: Зомби-житель
+  ZOMBIFIED_PIGLIN: Зомбифицированный пиглин

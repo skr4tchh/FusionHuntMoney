@@ -1,0 +1,6 @@
+name: FusionHuntMoney
+version: '${version}'
+author: "Skr4tch (TG: skr4tch)"
+main: pw.fusionmine.fusionhuntmoney.FusionHuntMoney
+api-version: '1.21'
+depend: [Vault]
