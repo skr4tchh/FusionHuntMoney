@@ -10,6 +10,7 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.DecimalFormat;
 
 public class PlayerEvents implements Listener {
 
@@ -30,26 +31,27 @@ public class PlayerEvents implements Listener {
             String subtitle = Utils.getMsg("death.sendTitle.subtitle");
             player.sendTitle(title, subtitle);
         }
-        if (e.getEntity().getKiller() != null) {
-            Player killer = player.getKiller();
+        Player killer = player.getKiller();
+        if (killer != null) {
             if (player.equals(killer)) return;
             double balance = plugin.getEconomy().getBalance(player);
             if (balance > 0) {
                 String group = plugin.getPermission().getPrimaryGroup(player);
                 int percent = config.getInt("death-percent." + group, 10);
-                double equals = new BigDecimal(balance * percent / 100.0)
-                        .setScale(2, RoundingMode.HALF_UP)
-                        .doubleValue();
-                if (equals > 0) {
-                    plugin.getEconomy().withdrawPlayer(player, equals);
-                    plugin.getEconomy().depositPlayer(killer, equals);
+                BigDecimal equals = new BigDecimal(balance * percent / 100.0)
+                        .setScale(0, RoundingMode.HALF_UP);
+                if (equals.compareTo(BigDecimal.ZERO) > 0) {
+                    plugin.getEconomy().withdrawPlayer(player, equals.doubleValue());
+                    plugin.getEconomy().depositPlayer(killer, equals.doubleValue());
+                    DecimalFormat formatter = new DecimalFormat("#,###");
+                    String moneyStr = formatter.format(equals);
                     player.sendMessage(Utils.getMsg("death.message")
-                            .replace("{money}", String.valueOf(equals))
+                            .replace("{money}", moneyStr)
                             .replace("{percent}", String.valueOf(percent))
                             .replace("{player}", killer.getName())
                     );
                     killer.sendMessage(Utils.getMsg("kill.player.message")
-                            .replace("{money}", String.valueOf(equals))
+                            .replace("{money}", moneyStr)
                             .replace("{player}", player.getName())
                     );
                 }
